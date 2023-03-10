@@ -1,0 +1,83 @@
+<title>Fotógafo - Editar página Sobre</title>
+
+<div id="mostrarErros"></div>
+
+<div id="page-top">
+
+  {{>_menuPainel}}
+
+    <div id="content-wrapper">
+
+      <div class="container-fluid">
+
+        <!-- Breadcrumbs-->
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="#">Dashboard</a>
+          </li>
+          <li class="breadcrumb-item active">Editar página de Sobre</li>
+        </ol>
+
+        <!-- Area Chart Example-->
+        <div class="card mb-3">
+          <div class="card-header">
+            <i class="fas fa-clipboard"></i>
+            Editar página de sobre</div>
+          <div class="card-body">
+            
+              <form action="/admin/editarSobre" method="POST">
+
+                  <label for="titulo">Título: </label>
+                  <input placeholder="Hernandes Dias Lopes" type="text" class="form-control" name="titulo" value="{{sobre.titulo}}">
+                  
+                  <label class="mt-2" for="imagem">Link da imagem: </label>
+                  <input placeholder="https://imgur.om/6as5dv" type="text" class="form-control" name="imagem" value="{{sobre.linkImagem}}">
+
+                  <label class="mt-2" for="descricao">Descrição: </label>
+                  <textarea class="form-control" id="descricao" placeholder="Sua descrição aqui..." name="descricao">{{sobre.descricao}}</textarea>
+                  
+                  <button type="submit" class="btn btn-primary mt-3">Salvar</button>
+
+              </form>
+
+          </div>
+          <div class="card-footer small text-muted">Com a força de vontade você será capaz de vencer seus desafios!</div>
+        </div>
+
+
+      </div>
+      <!-- /.container-fluid -->
+
+            {{>_footer}}
+
+    </div>
+    <!-- /.content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Logout Modal-->
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Pronto para sair?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">Selecione "Sair" se você esta pronto para encerrar sua sessão atual.</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+          <a class="btn btn-primary" href="/usuarios/logout">Sair</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
